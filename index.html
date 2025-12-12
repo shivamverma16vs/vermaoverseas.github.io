@@ -1,143 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Verma Overseas – Wheat Flour Exporter</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Verma Overseas — Premium Wheat Flour Exporter</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #222;
+    :root{
+      --bg:#0b0b0b;
+      --card:#111;
+      --accent:#caa434;
+      --muted:#bdbdbd;
+      --radius:12px;
+      font-family: "Inter", Arial, sans-serif;
+    }
+    body{margin:0;background:#0a0a0a;color:#eee;}
+    a{color:var(--accent);text-decoration:none}
+
+    .site{max-width:1100px;margin:20px auto;padding:15px;}
+
+    header{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:10px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:65px;}
+
+    nav a{margin-left:20px;font-weight:600;color:#e7dea8}
+
+    /* HERO */
+    .hero{
+      margin-top:20px;
+      background:#000;
+      border-radius:18px;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero img{
+      width:100%;height:340px;object-fit:cover;
+      filter:brightness(.45);
+    }
+    .hero .text{
+      position:absolute;top:0;left:0;right:0;bottom:0;
+      display:flex;flex-direction:column;justify-content:center;
+      text-align:center;padding:20px;
+    }
+    .hero h2{color:var(--accent);font-size:2rem;margin:0 0 5px}
+    .hero h3{margin:0 0 20px;}
+
+    .btn{
+      background:var(--accent);color:black;padding:12px 18px;border-radius:10px;
+      font-weight:bold;margin:6px;display:inline-block;
+    }
+    .btn.secondary{
+      background:transparent;color:white;border:1px solid #555;
     }
 
-    /* HERO SECTION */
-    .hero {
-      height: 420px;
-      background-image: url('https://images.unsplash.com/photo-1600185365483-26d7a4c66b4e?q=80&w=1800&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
+    /* CARDS */
+    .card{
+      background:var(--card);
+      padding:18px;border-radius:var(--radius);
+      margin-top:20px;
     }
 
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.55);
+    h4{margin:0 0 12px;color:var(--accent)}
+
+    .product-gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:12px;margin-top:12px;
+    }
+    .product-gallery img{
+      width:100%;border-radius:12px;height:150px;object-fit:cover;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero h1 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    h2 {
-      color: #d4a017;
-      border-left: 5px solid #d4a017;
-      padding-left: 10px;
-    }
-
-    ul {
-      margin: 10px 0 20px 20px;
-    }
-
-    /* CONTACT BOX */
-    .contact-box {
-      padding: 20px;
-      background: #f8f8f8;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      background: #111;
-      color: #ccc;
-      font-size: 0.9rem;
-    }
+    footer{text-align:center;margin-top:30px;color:var(--muted);padding:10px 0}
   </style>
 </head>
 
 <body>
+<div class="site">
+
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="Verma Overseas Logo">
+      <div>
+        <h3 style="margin:0;color:white;">Verma Overseas</h3>
+        <small style="color:var(--muted)">Premium Wheat Flour Exporter</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <!-- HERO -->
-  <div class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Premium Wheat Flour – Export Quality</h1>
-      <p>Trusted sourcing • Lab Tested • Private Label Packaging Available</p>
+  <section class="hero">
+    <img src="flour1.jpg" alt="Wheat Flour Export">
+    <div class="text">
+      <h2>Premium Wheat Flour — Export Quality</h2>
+      <h3>Reliable sourcing • Lab tested • Export-ready packaging</h3>
+      <div>
+        <a href="#contact" class="btn">Request Quote</a>
+        <a href="#products" class="btn secondary">See Products</a>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ABOUT SECTION -->
-  <div class="section">
-    <h2>About Us</h2>
-    <p>
-      Verma Overseas is a New Delhi–based merchant exporter specializing in premium-quality wheat flour.
-      We supply Whole Wheat Atta, Maida, and Semolina from trusted Indian mills with guaranteed quality,
-      competitive pricing and timely shipments.
-    </p>
+  <!-- ABOUT -->
+  <div class="card">
+    <h4>About Us</h4>
+    <p>Verma Overseas is a Delhi-based merchant exporter supplying premium wheat flour from trusted Indian mills. We ensure strict quality control, moisture/ash/protein testing and reliable shipments.</p>
   </div>
 
   <!-- PRODUCTS -->
-  <div class="section">
-    <h2>Products</h2>
+  <div class="card" id="products">
+    <h4>Products</h4>
     <ul>
-      <li><strong>Whole Wheat Flour (Atta)</strong> — Stone/Chakki processed</li>
-      <li><strong>Refined Wheat Flour (Maida)</strong> — Industrial & Bakery grade</li>
-      <li><strong>Semolina (Sooji/Rawa)</strong> — Premium quality</li>
+      <li><b>Whole Wheat Flour (Atta)</b> — Stone/Chakki processed</li>
+      <li><b>Refined Wheat Flour (Maida)</b> — Industrial grade</li>
+      <li><b>Semolina (Rawa/Sooji)</b> — Premium yield</li>
     </ul>
-    <p><strong>Packaging:</strong> 10 kg • 25 kg • 50 kg (Plain / Neutral bags). Custom packing available.</p>
   </div>
 
-  <!-- MARKETS -->
-  <div class="section">
-    <h2>Target Countries</h2>
-    <p>
-      UAE, Oman, Saudi Arabia, Qatar, Bahrain, Nepal, Sri Lanka, Kenya, Tanzania, Asia & Africa.
-    </p>
-  </div>
+  <!-- GALLERY -->
+  <div class="card" id="gallery">
+    <h4>Product Gallery</h4>
 
-  <!-- CONTACT -->
-  <div class="section">
-    <h2>Contact Us</h2>
-    <div class="contact-box">
-      <p><strong>Company:</strong> Verma Overseas</p>
-      <p><strong>Address:</strong> 265, Mohan Garden, Uttam Nagar, New Delhi – 110059, India</p>
-      <p><strong>Phone:</strong> +91-7054628005</p>
-      <p><strong>Email:</strong> vermaoverseas.vo@gmail.com</p>
+    <div class="product-gallery">
+      <img src="flour1.jpg" alt="Wheat Flour Bag">
+      <img src="flour2.jpg" alt="Wheat Flour Processing">
+      <img src="flour3.jpg" alt="Flour Packing">
+      <img src="flour4.jpg" alt="Wheat & Flour Bowl">
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    © 2026 Verma Overseas — Exporter of Wheat Flour | All Rights Reserved
+  <!-- CONTACT -->
+  <div class="card" id="contact">
+    <h4>Contact Us</h4>
+    <p><b>Phone:</b> <a href="tel:+917054628005">+91-7054628005</a></p>
+    <p><b>Email:</b> <a href="mailto:vermaoverseas.vo@gmail.com">vermaoverseas.vo@gmail.com</a></p>
+    <p><b>Address:</b> Uttam Nagar, New Delhi — 110059</p>
   </div>
 
+  <footer>
+    © 2026 Verma Overseas — Indian Merchant Exporter
+  </footer>
+
+</div>
 </body>
 </html>
